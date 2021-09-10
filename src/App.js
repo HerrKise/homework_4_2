@@ -17,6 +17,7 @@ function App() {
       };
     })
   );
+
   const handleDelete = (userId) => {
     return setUsers(
       users.filter((i) => {
@@ -24,6 +25,7 @@ function App() {
       })
     );
   };
+
   const handleToggleBookMark = (id) => {
     return setUsers(
       users.map((i) => {
@@ -36,6 +38,7 @@ function App() {
       })
     );
   };
+  
   return (
     <div>
       <h1>
