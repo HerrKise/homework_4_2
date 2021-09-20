@@ -52,10 +52,10 @@ User.propTypes = {
     qualities: PropTypes.array.isRequired,
     name: PropTypes.string.isRequired,
     _id: PropTypes.string.isRequired,
-    profession: PropTypes.array.isRequired,
+    profession: PropTypes.object.isRequired,
     completedMeetings: PropTypes.number.isRequired,
     rate: PropTypes.number.isRequired,
-    status: PropTypes.string.isRequired,
+    status: PropTypes.bool.isRequired,
     onDelete: PropTypes.func.isRequired,
     toggleBookMark: PropTypes.func.isRequired
 };

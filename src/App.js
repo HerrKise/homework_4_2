@@ -5,10 +5,10 @@ import api from "./api";
 
 function App() {
     const [users, setUsers] = useState(
-        api.users.fetchAll().map((i) => {
+        api.users.fetchAll().map((user) => {
             return {
-                ...i,
-                status: "disable"
+                ...user,
+                status: false
             };
         })
     );
@@ -25,9 +25,7 @@ function App() {
         return setUsers(
             users.map((i) => {
                 if (i._id === id) {
-                    i.status === "disable"
-                        ? (i.status = "enable")
-                        : (i.status = "disable");
+                    i.status = !i.status;
                 }
                 return i;
             })

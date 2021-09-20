@@ -1,15 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 const BookMark = ({ status, ...rest }) => {
-    if (status === "disable") {
-        return <i className="bi bi-bookmark" status={status}></i>;
-    } else if (status === "enable") {
-        return <i className="bi bi-bookmark-fill" status={status}></i>;
+    let updatingName = "bi bi-bookmark";
+    if (status === true) {
+        updatingName += "-fill";
     }
+
+    return <i className={updatingName} status={`${status}`}></i>;
 };
 
 BookMark.propTypes = {
-    status: PropTypes.string.isRequired
+    status: PropTypes.bool.isRequired
 };
 
 export default BookMark;
